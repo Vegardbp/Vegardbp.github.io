@@ -183,7 +183,7 @@ nav .inner {
   border-radius: var(--radius);
   overflow: hidden;          /* clips image to border-radius */
   border: 1px solid var(--border);
-  min-height: 240px;
+  aspect-ratio: 9 / 11;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -221,9 +221,9 @@ nav .inner {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.05) 0%,
-    rgba(0,0,0,0.5)  45%,
-    rgba(0,0,0,0.9)  100%
+    rgba(0,0,0,0.15) 0%,
+    rgba(0,0,0,0.6)  30%,
+    rgba(0,0,0,1)  100%
   );
   z-index: 1;
 }
@@ -235,10 +235,12 @@ nav .inner {
   padding: 1.25rem 1.5rem 1.5rem;
 }
 
+
 .card-tags {
   display: flex;
+  flex-direction: column;
   gap: 6px;
-  flex-wrap: wrap;
+  align-items: flex-start;
   margin-bottom: 0.75rem;
 }
 
