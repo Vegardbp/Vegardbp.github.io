@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Bros — Vegard Pettersen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <a class="back-link" href="index.html">← All projects</a>
+
+    <!-- ── Project Hero ───────────────────────────────── -->
+    <section class="project-hero">
+      <div class="project-hero-tags">
+        <span class="tag tag-solo">solo project</span>
+        <span class="tag tag-steam">Steam · April 2026</span>
+      </div>
+      <h1><strong>Dark Bros</strong></h1>
+      <p class="project-stack-line">Unity · C# · HLSL · Git</p>
+      <p class="project-summary">
+        Free-for-all arena pvp brawler, with a focus on fast physics-based movement, attack prediction, and precise timing.
+        <br><br>
+        Releasing on steam in April 2026, after 1.5 years of development.
+        <br><br>
+        All contributions are by me, including gameplay programming, shader work, 3D models, animations, UI, steam integration, sound desing, and more.
+        <br><br>
+        Built with Unity Netcode for GameObjects, using Facepunch Steamworks for multiplayer and Steam integration features.
+        <br><br>
+        Designed with an iterative workflow, with a strong focus on frequent testing, iteration speed, and player feedback to refine the core gameplay loop.
+      </p>
+      <div class="project-links">
+        <a class="btn btn-solid" href="https://store.steampowered.com/app/4447250/Dark_Bros/" target="_blank">View on Steam</a>
+        <!-- Uncomment if you have a public GitHub repo for this project:
+        <a class="btn" href="https://github.com/Vegardbp/..." target="_blank">Source code</a>
+        -->
+      </div>
+    </section>
+
+
+    <!-- ── Features ───────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Features</p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <strong>Multiplayer networking</strong>
+          Unity Netcode for GameObjects over Steam P2P via Facepunch Steamworks
+        </div>
+        <div class="feature-item">
+          <strong>GPU grass</strong>
+          GPU-instanced with compute shader frustum culling
+        </div>
+        <div class="feature-item">
+          <strong>Custom shaders</strong>
+          Volumetric atmosphere, world-space shadows, subsurface scattering
+        </div>
+        <div class="feature-item">
+          <strong>Proximity voice chat</strong>
+          Per-player volume control and mute functionality
+        </div>
+        <div class="feature-item">
+          <strong>Lobby system</strong>
+          Hosting, joining, search filters, kick and ban
+        </div>
+        <div class="feature-item">
+          <strong>Replay system</strong>
+          Snapshot-based post-match playback of full match state
+        </div>
+        <div class="feature-item">
+          <strong>Save Data System</strong>
+          Custom JSON-based saving system, to save and load any data.
+        </div>
+        <div class="feature-item">
+          <strong>4 playable characters</strong>
+          Distinct ability sets, movement systems, and 2 skins each
+        </div>
+        <div class="feature-item">
+          <strong>6 maps</strong>
+          Unique gameplay-affecting environmental elements per map
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ── Main Gameplay Video ────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Gameplay (Note, some clips are outdated, and no longer represent the current state)</p>
+
+      <!--
+        OPTION A — YouTube embed (recommended for large gameplay recordings)
+        1. Upload your video to YouTube (can be unlisted)
+        2. Get the video ID from the URL: youtube.com/watch?v=VIDEO_ID_HERE
+        3. Replace VIDEO_ID_HERE below with your actual ID
+        4. Delete the placeholder div below this block
+      -->
+      <!--
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      -->
+
+      <!--
+        OPTION B — Local video file in your repo
+        1. Put your video in an "images" folder: images/dark-bros-gameplay.mp4
+        2. Keep the file under ~50MB for GitHub (GitHub hard-limits at 100MB)
+        3. For bigger files, use YouTube (Option A above) instead
+        4. Delete the placeholder div below this block
+      -->
+      <!--
+      <div class="video-embed">
+        <video controls poster="images/dark-bros-thumbnail.jpg">
+          <source src="images/dark-bros-gameplay.mp4" type="video/mp4">
+        </video>
+      </div>
+      -->
+
+      <!-- DELETE THIS once you add a real video above -->
+
+      <div class="video-container">
+        <video id="myVideo" autoplay muted loop playsinline>
+          <source src="Videos/DarkBrosGameplay2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+
+    </section>
+
+    <!-- ── Screenshots ────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Screenshots</p>
+
+      <!--
+        HOW TO ADD SCREENSHOTS:
+        1. Create an "images" folder in your repo (same level as index.html)
+        2. Drop your image files in there, e.g.:
+             images/dark-bros-1.jpg
+             images/dark-bros-2.jpg
+             images/dark-bros-3.jpg
+        3. Replace the placeholder below with this:
+
+        <div class="screenshot-grid">
+          <img src="images/dark-bros-1.jpg" alt="Dark Bros — gameplay screenshot" />
+          <img src="images/dark-bros-2.jpg" alt="Dark Bros — map overview" />
+          <img src="images/dark-bros-3.jpg" alt="Dark Bros — character select" />
+          <img src="images/dark-bros-4.jpg" alt="Dark Bros — lobby screen" />
+        </div>
+
+        TIP: PNG is best for UI screenshots. JPEG (quality ~85) is fine
+        for in-game shots and will keep the repo smaller.
+      -->
+
+      <!-- DELETE THIS once you add real screenshots above -->
+      <div class="screenshot-grid">
+          <img src="dbScreenshots/1.png" alt="Dark Bros — Aerial shot from replay mode" />
+          <img src="dbScreenshots/2.png" alt="Dark Bros — Lobby join menu" />
+          <img src="dbScreenshots/3.png" alt="Dark Bros — On ground combat shot from replay mode" />
+          <img src="dbScreenshots/4.png" alt="Dark Bros — Steam capusle art" />
+          <img src="dbScreenshots/5.png" alt="Dark Bros — In-game environment shot" />
+          <img src="dbScreenshots/6.png" alt="Dark Bros — In-game environment shot" />
+        </div>
+
+    </section>
+
+  </div><!-- /container -->

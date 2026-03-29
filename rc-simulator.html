@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RC Car Simulator — Vegard Pettersen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <a class="back-link" href="index.html">← All projects</a>
+
+    <section class="project-hero">
+      <div class="project-hero-tags">
+        <span class="tag tag-solo">group project</span>
+        <span class="tag tag-solo">NTNU · AIS2203 Data Technique for Cyber-Physical Systems, 2025</span>
+      </div>
+      <h1><strong>RC Car Simulator</strong></h1>
+      <p class="project-stack-line">C++ · threepp · Bullet Physics · Git · Python</p>
+      <p class="project-summary">
+        A hardware-accurate simulation of a Sphero RVR RC car. Indistinguishable from the real system to external control systems, other than IP-address. 
+        <br><br>
+        Developed as part of a group project focused on cyber-physical systems.
+        <br><br>
+        I was responsible for the entire simulator (Including Models and Textures) and control system, while the others were responsible for cross-program communication systems, physical hardware, and GUI.
+        <br><br>
+        Graded B, with the reason that the report was on C level, but good simulation, and monocular slam attempt, made the project overall a B.
+      </p>
+      <div class="project-links">
+        <a class="btn btn-solid" href="https://github.com/Vegardbp/JetsomSimulator" target="_blank">Source code on GitHub</a>
+      </div>
+    </section>
+
+    <!-- ── Features ───────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Details</p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <strong>Hardware-accurate</strong>
+          Simulation is indistinguishable from the real Sphero RVR to any external controller or GUI
+        </div>
+        <div class="feature-item">
+          <strong>Bullet Physics</strong>
+          Full collision detection and vehicle dynamics via Bullet physics engine
+        </div>
+        <div class="feature-item">
+          <strong>Live video stream</strong>
+          3D first-person view streamed over UDP-IP to controller and GUI in real time
+        </div>
+        <div class="feature-item">
+          <strong>C++ / threepp</strong>
+          3D rendering via threepp (C++ port of three.js), no game engine
+        </div>
+        <div class="feature-item">
+          <strong>Monocular Slam</strong>
+          Custom monocular SLAM implementation in python without IMU data
+        </div>
+        <div class="feature-item">
+          <strong>Object Recognition</strong>
+          Object recognition using OpenCV in python, able to recognise a dozen objects in the simulator, and more than 60 objects in the real world
+        </div>
+        <div class="feature-item">
+          <strong>Baked Lighting</strong>
+          Custom baked ray-traced lighting for static scene despite weak lighting support in threepp
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Demo Video ─────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Demonstration Video</p>
+
+      <!--
+        YOUTUBE EMBED — replace VIDEO_ID_HERE
+      -->
+      <!--
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      -->
+
+      <!-- DELETE THIS once you add a real video -->
+      <div class="video-container">
+        <video id="myVideo" autoplay muted loop playsinline>
+          <source src="Videos/Sphero.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </section>
+
+  </div><!-- /container -->

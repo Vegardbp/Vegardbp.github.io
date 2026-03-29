@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPU Genetic Algorithm — Vegard Pettersen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <a class="back-link" href="index.html">← All projects</a>
+
+    <section class="project-hero">
+      <div class="project-hero-tags">
+        <span class="tag tag-grade">Graded A</span>
+        <span class="tag tag-solo">NTNU · AIS2101 Intelligent Systems, 2025</span>
+      </div>
+      <h1><strong>GPU Genetic Algorithm</strong></h1>
+      <p class="project-stack-line">Unity · C# · HLSL · Git</p>
+      <p class="project-summary">
+        GPU-accelerated genetic algorithm running on the compute shader pipeline.
+        <br><br>
+        Solves the Rastrigin function across high-dimensional search spaces (500 dimensions with 10K individuals in 13 seconds on an RTX 3060).
+        <br><br>
+        Designed to be adaptable to any problem below 500 dimensions, tested with 3 dimensional PID-tuning with specified desired responses, solving in a few milliseconds.
+      </p>
+      <div class="project-links">
+        <a class="btn btn-solid" href="https://github.com/Vegardbp/PartB-GeneticAlgorithm" target="_blank">Source code and report on GitHub</a>
+      </div>
+    </section>
+
+    <!-- ── Features ───────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Details</p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <strong>Compute shader acceleration</strong>
+          Entire fitness evaluation and selection pipeline runs on GPU via HLSL compute shaders
+        </div>
+        <div class="feature-item">
+          <strong>High-dimensional optimisation</strong>
+          Solves the Rastrigin function — a standard benchmark for high-dimensional, multi-modal problems
+        </div>
+        <div class="feature-item">
+          <strong>Adaptable design</strong>
+          Architecture is general enough to apply to other optimisation targets, such as PID tuning
+        </div>
+        <div class="feature-item">
+          <strong>Unity + HLSL</strong>
+          Integrates Unity's compute shader pipeline with a C# driver and HLSL kernel
+        </div>
+        <div class="feature-item">
+          <strong>Custom tournament structure</strong>
+          Custom method for fitness evaluation, allowing for parallelization of tournement selection, with CPU based final selection of absolute elites
+        </div>
+        <div class="feature-item">
+          <strong>GUI with parameter controls</strong>
+          User interface for control of parameters, such as fitness thresholds, mutation rates, and more, with real-time visualisation of convergence and fitness distributions
+        </div>
+      </div>
+
+    <!-- ── Demo Video ─────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Demonstration Video</p>
+
+      <!--
+        YOUTUBE EMBED — replace VIDEO_ID_HERE with your YouTube video ID
+        e.g. if your URL is youtube.com/watch?v=abc123  →  use  abc123
+      -->
+      <!--
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      -->
+
+      <!-- DELETE THIS placeholder once you add a video -->
+      <div class="video-container">
+        <video id="myVideo" autoplay muted loop playsinline>
+          <source src="Videos/RastriginGameing.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    </section>
+
+  </div><!-- /container -->

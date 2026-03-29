@@ -1,26 +1,142 @@
-<!DacType html>
-<html>
-	<head>
-		<title>
-			Fattig
-		</title>
-		<meta carset = "UTF-8">
-		<meta name = "viewport" content = "width=device-width,initial-scale=1.0">
-	</head>
-	<body style = "background-color:blue;">
-		<h1 style = "color:red;font-size:500%;">
-			Fattig man kjøper lorgorghini, du vil ikkje tro vordan han fikk pengene
-		</h1>
-		<P style = "color:green;font-size:200%;">
-			Fattig man vinner lotteriet of vinner 10 million kroner. <br>
-			Han brukte det til å kjøpe splitter ny lorghorghini
-		</P>
-		<P style = "font-size:500%;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vegard Pettersen — Game Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-			<a href = "CarEvo.html"> 
-			<img src="https://media.discordapp.net/attachments/940568884979855403/943859121222987806/unknown.png" alt="Car evolution"/> 
-			<br> 
-			</a>
-		</P>
-	</body>
-</html>
+
+  <div class="container">
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section class="hero">
+      <p class="hero-eyebrow">Game developer &amp; programmer</p>
+      <h1>Vegard<br>Pettersen</h1>
+      <p class="hero-desc">
+        C++ and C# game developer, with a focus on multiplayer networking,
+        graphics programming, GPU based compute systems, and gameplay systems. Based in Norway.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="mailto:vegardbp@gmail.com">vegardbp@gmail.com</a>
+        <a class="btn btn-solid" href="https://github.com/Vegardbp" target="_blank">GitHub</a>
+        <a class="btn btn-solid" href="resume.pdf" target="_blank">Resume (PDF)</a>
+      </div>
+    </section>
+
+    <!-- ── Projects ──────────────────────────────────── -->
+    <section class="section" id="projects">
+      <p class="section-label">Projects</p>
+      <div class="project-grid">
+
+        <!--
+          HOW TO ADD A BACKGROUND IMAGE TO A CARD:
+
+          1. Put your image file in the /images folder, e.g.:
+               images/dark-bros-card.jpg
+
+          2. On the <a class="project-card"> element, add:
+               style="--card-img: url('images/dark-bros-card.jpg')"
+
+          3. Done. The dark gradient overlay is applied automatically.
+
+          TIPS:
+          - Landscape images work best (roughly 16:9 or wider)
+          - Aim for 800–1200px wide, good quality but not huge
+          - Images with some dark areas at the bottom read better
+          - If an image is very bright, open style.css and darken
+            the gradient stops in the .project-card::after rule
+        -->
+
+        <a class="project-card" href="dark-bros.html"
+           style="--card-img: url('images/darkBrosCard.jpg')">
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="tag tag-solo">solo project</span>
+              <span class="tag tag-steam">Steam · April 2026</span>
+            </div>
+            <h3 class="card-title">Dark Bros</h3>
+            <p class="card-stack">Unity · C# · HLSL</p>
+            <p class="card-desc">
+              Complete PvP game built solo. Custom multiplayer networking,
+              GPU-instanced grass, volumetric atmosphere, and a full
+              snapshot-based replay system.
+            </p>
+            <span class="card-arrow">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="asteroid-game.html"
+           style="--card-img: url('images/asteroids.png')">
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="tag tag-grade">Graded A</span>
+            </div>
+            <h3 class="card-title">Roguelike Asteroid Game</h3>
+            <p class="card-stack">C++ · threepp · VCPkg</p>
+            <p class="card-desc">
+              2.5D roguelike take on Atari Asteroids with a custom 3D physics
+              engine and particle system. Focus on clean OOP architecture.
+            </p>
+            <span class="card-arrow">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="rc-simulator.html"
+           style="--card-img: url('images/rcimages.png')">
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="tag tag-solo">group project</span>
+            </div>
+            <h3 class="card-title">RC Car Simulator</h3>
+            <p class="card-stack">C++ · threepp · Bullet Physics</p>
+            <p class="card-desc">
+              Hardware-accurate simulation of a Sphero RVR. Bullet physics,
+              first-person 3D rendering, live video over UDP-IP.
+            </p>
+            <span class="card-arrow">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="genetic-algorithm.html"
+           style="--card-img: url('images/rastrigin.png')">
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="tag tag-grade">Graded A</span>
+            </div>
+            <h3 class="card-title">GPU Genetic Algorithm</h3>
+            <p class="card-stack">Unity · C# · HLSL</p>
+            <p class="card-desc">
+              GPU-accelerated genetic algorithm using compute shaders to solve
+              the Rastrigin function across high-dimensional search spaces.
+            </p>
+            <span class="card-arrow">View project →</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ── Skills ────────────────────────────────────── -->
+    <section class="section" id="skills">
+      <p class="section-label">Skills</p>
+      <div class="skills-list">
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">C#</span>
+        <span class="skill-tag">C</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">HLSL</span>
+        <span class="skill-tag">GLSL</span>
+        <span class="skill-tag">Unity</span>
+        <span class="skill-tag">Blender</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Multiplayer networking</span>
+        <span class="skill-tag">Compute shaders</span>
+        <span class="skill-tag">Graphics programming</span>
+        <span class="skill-tag">Performance optimisation</span>
+      </div>
+    </section>
+
+  </div><!-- /container -->

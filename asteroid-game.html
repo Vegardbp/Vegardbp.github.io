@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roguelike Asteroid Game — Vegard Pettersen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <a class="back-link" href="index.html">← All projects</a>
+
+    <section class="project-hero">
+      <div class="project-hero-tags">
+        <span class="tag tag-grade">Graded A</span>
+        <span class="tag tag-solo">NTNU · AIS1003 Object Oriented Programming, 2023</span>
+      </div>
+      <h1><strong>Roguelike Asteroid Game</strong></h1>
+      <p class="project-stack-line">C++ · threepp · VCPkg · Git</p>
+      <p class="project-summary">
+        A 2.5D rougelike take on Atari Asteroids, built in (almost) pure C++ from scratch.
+        <br><br>
+        Built as a final project for the Object Oriented Programming course at NTNU. Graded A with a focus on code quality, architecture, and design patterns.
+        <br><br>
+        Features a custom-built physics engine, particle system, roguelike item modifiers, and more.
+        <br><br>
+        All code contributions, and 3D art are by me, but uses some AI-generated assets, which I now regret using.
+      </p>
+      <div class="project-links">
+        <a class="btn btn-solid" href="https://github.com/Vegardbp/AsteroidGame" target="_blank">Source code on GitHub</a>
+      </div>
+    </section>
+
+    <!-- ── Features ───────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Details</p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <strong>Custom physics engine</strong>
+          3D collision detection and response built from scratch in C++, with ability to inject collision logic via callbacks
+        </div>
+        <div class="feature-item">
+          <strong>Particle system</strong>
+          Custom particle system for explosions, thrust, visual effects. Also used to spawn all asteroids, using inheritance from particle base class
+        </div>
+        <div class="feature-item">
+          <strong>Roguelike elements</strong>
+          Asteroids drop random items when destroyed, which apply modifiers to the spaceship
+        </div>
+        <div class="feature-item">
+          <strong>Clean OOP architecture</strong>
+          Designed for maintainability, graded specifically on architecture quality
+        </div>
+        <div class="feature-item">
+          <strong>UI Systems</strong>
+          Custom UI systems, library only included raw image rendering
+        </div>
+        <div class="feature-item">
+          <strong>Audio Systems</strong>
+          Custom audio systems for sound effects and background music, library only included basic one-shot playback, which was not sufficient
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── Demo Video ─────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Gameplay</p>
+
+      <!--
+        YOUTUBE EMBED — replace VIDEO_ID_HERE
+      -->
+      <!--
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      -->
+
+      <!-- DELETE THIS once you add a real video -->
+      <div class="video-container">
+        <video id="myVideo" autoplay muted loop playsinline>
+          <source src="Videos/Asteroids.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </section>
+
+  </div><!-- /container -->
