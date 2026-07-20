@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vegard Pettersen — Game Developer</title>
+  <title>Vegard Pettersen | Automation &amp; Simulation Engineer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,12 +13,12 @@
 
     <!-- ── Hero ──────────────────────────────────────── -->
     <section class="hero">
-      <p class="hero-eyebrow">Game developer &amp; programmer</p>
+      <p class="hero-eyebrow">Automation &amp; simulation engineer</p>
       <h1>Vegard<br>Pettersen</h1>
       <p class="hero-desc">
-        C++ and C# game developer, with a focus on multiplayer networking,
-        graphics programming, GPU based compute systems, and gameplay systems. <br>
-        Bachelor's degree in Automation Engineering at NTNU.
+        C++ and C# developer with a Bachelor's in Automation Engineering (NTNU), building
+        real-time simulations, control systems, and GPU-accelerated optimization. <br>
+        Background also covers multiplayer networking and graphics programming.
       </p>
       <div class="btn-row">
         <a class="btn btn-solid" href="mailto:vegardbp@gmail.com">vegardbp@gmail.com</a>
@@ -52,6 +52,61 @@
             the gradient stops in the .project-card::after rule
         -->
 
+        <a class="project-card" href="rc-simulator.html"
+           style="--card-img: url('images/rcimages.png')">
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="tag tag-grade">Graded B</span>
+              <span class="tag tag-solo">group project</span>
+              <span class="tag tag-solo">Focus on functionality</span>
+            </div>
+            <h3 class="card-title">RC Car Simulator</h3>
+            <p class="card-stack">C++ · threepp · Bullet Physics</p>
+            <p class="card-desc">
+              Hardware-accurate simulation of a Sphero RVR, used as a
+              cyber-physical test bed. Bullet physics, control system,
+              live video over UDP-IP, and monocular SLAM.
+            </p>
+            <span class="card-arrow">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="c25-crane.html"
+           style="--card-img: url('images/c25CraneCard.png')">
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="tag tag-grade">Bachelor Thesis</span>
+              <span class="tag tag-solo">group project</span>
+              <span class="tag tag-solo">Client: Seaonics AS</span>
+            </div>
+            <h3 class="card-title">C25 Crane</h3>
+            <p class="card-stack">C++ · Python · 3D Print</p>
+            <p class="card-desc">
+              1:25 scale offshore crane replica, live-driven by Seaonics'
+              real control stack. Custom electrical system, distributed
+              real-time motor control, and full mechanical build.
+            </p>
+            <span class="card-arrow">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="genetic-algorithm.html"
+           style="--card-img: url('images/rastrigin.png')">
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="tag tag-grade">Graded A</span>
+              <span class="tag tag-solo">Focus on the algorithm</span>
+            </div>
+            <h3 class="card-title">GPU Genetic Algorithm</h3>
+            <p class="card-stack">Unity · C# · HLSL</p>
+            <p class="card-desc">
+              GPU-accelerated genetic algorithm using compute shaders for
+              high-dimensional optimization, including PID controller tuning.
+            </p>
+            <span class="card-arrow">View project →</span>
+          </div>
+        </a>
+
         <a class="project-card" href="dark-bros.html"
            style="--card-img: url('images/darkBrosCard.jpg')">
           <div class="card-content">
@@ -62,8 +117,8 @@
             <h3 class="card-title">Dark Bros</h3>
             <p class="card-stack">Unity · C# · HLSL</p>
             <p class="card-desc">
-              Complete PvP game built solo. Custom multiplayer networking,
-              GPU-instanced grass, volumetric atmosphere, and a full
+              Real-time multiplayer application built solo. Custom
+              networking, GPU-instanced rendering, and a full
               snapshot-based replay system.
             </p>
             <span class="card-arrow">View project →</span>
@@ -80,43 +135,8 @@
             <h3 class="card-title">Roguelike Asteroid Game</h3>
             <p class="card-stack">C++ · threepp · VCPkg</p>
             <p class="card-desc">
-              2.5D roguelike take on Atari Asteroids with a custom 3D physics
+              2.5D roguelike built from scratch with a custom 3D physics
               engine and particle system. Focus on clean OOP architecture.
-            </p>
-            <span class="card-arrow">View project →</span>
-          </div>
-        </a>
-
-        <a class="project-card" href="rc-simulator.html"
-           style="--card-img: url('images/rcimages.png')">
-          <div class="card-content">
-            <div class="card-tags">
-              <span class="tag tag-grade">Graded B</span>
-              <span class="tag tag-solo">group project</span>
-              <span class="tag tag-solo">Focus on functionality</span>
-            </div>
-            <h3 class="card-title">RC Car Simulator</h3>
-            <p class="card-stack">C++ · threepp · Bullet Physics</p>
-            <p class="card-desc">
-              Hardware-accurate simulation of a Sphero RVR. Bullet physics,
-              first-person 3D rendering, live video over UDP-IP.
-            </p>
-            <span class="card-arrow">View project →</span>
-          </div>
-        </a>
-
-        <a class="project-card" href="genetic-algorithm.html"
-           style="--card-img: url('images/rastrigin.png')">
-          <div class="card-content">
-            <div class="card-tags">
-              <span class="tag tag-grade">Graded A</span>
-              <span class="tag tag-solo">Focus on the algorithm</span>
-            </div>
-            <h3 class="card-title">GPU Genetic Algorithm</h3>
-            <p class="card-stack">Unity · C# · HLSL</p>
-            <p class="card-desc">
-              GPU-accelerated genetic algorithm using compute shaders to solve
-              the Rastrigin function across high-dimensional search spaces.
             </p>
             <span class="card-arrow">View project →</span>
           </div>
@@ -130,18 +150,20 @@
       <p class="section-label">Skills</p>
       <div class="skills-list">
         <span class="skill-tag">C++</span>
-        <span class="skill-tag">C#</span>
         <span class="skill-tag">C</span>
         <span class="skill-tag">Python</span>
+        <span class="skill-tag">C#</span>
+        <span class="skill-tag">Control systems</span>
+        <span class="skill-tag">Simulation</span>
+        <span class="skill-tag">Computer vision (OpenCV)</span>
+        <span class="skill-tag">Compute shaders</span>
+        <span class="skill-tag">Multiplayer networking</span>
+        <span class="skill-tag">Performance optimisation</span>
         <span class="skill-tag">HLSL</span>
         <span class="skill-tag">GLSL</span>
         <span class="skill-tag">Unity</span>
-        <span class="skill-tag">Blender</span>
         <span class="skill-tag">Git</span>
-        <span class="skill-tag">Multiplayer networking</span>
-        <span class="skill-tag">Compute shaders</span>
-        <span class="skill-tag">Graphics programming</span>
-        <span class="skill-tag">Performance optimisation</span>
+        <span class="skill-tag">Blender</span>
       </div>
     </section>
 

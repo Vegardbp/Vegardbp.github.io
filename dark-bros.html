@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dark Bros — Vegard Pettersen</title>
+  <title>Dark Bros | Vegard Pettersen</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,15 +21,15 @@
       <h1><strong>Dark Bros</strong></h1>
       <p class="project-stack-line">Unity · C# · HLSL · Git</p>
       <p class="project-summary">
-        Free-for-all arena pvp brawler, with a focus on fast physics-based movement, attack prediction, and precise timing.
+        Solo-built real-time multiplayer application, built around fast physics-based movement, networked state prediction, and precise timing.
         <br><br>
-        Releasing on steam in Q3 2026.
+        Releasing on Steam in Q3 2026.
         <br><br>
-        All contributions are by me, including gameplay programming, shader work, 3D models, animations, UI, steam integration, sound desing, and more.
+        All contributions are by me, including the networking and physics code, shader work, 3D models, animations, UI, Steam integration, and sound design.
         <br><br>
-        Built with Unity Netcode for GameObjects, using Facepunch Steamworks for multiplayer and Steam integration features.
+        Built with Unity Netcode for GameObjects, using Facepunch Steamworks for peer-to-peer networking and Steam integration.
         <br><br>
-        Designed with an iterative workflow, with a strong focus on frequent testing, iteration speed, and player feedback to refine the core gameplay loop.
+        Designed with an iterative workflow, with a strong focus on frequent testing, iteration speed, and feedback to refine system behavior.
       </p>
       <div class="project-links">
         <a class="btn btn-solid" href="https://store.steampowered.com/app/4447250/Dark_Bros/" target="_blank">View on Steam</a>
@@ -44,7 +44,7 @@
       <p class="section-label">Gameplay (Note, some clips are outdated, and no longer represent the current state)</p>
 
       <!--
-        OPTION A — YouTube embed (recommended for large gameplay recordings)
+        OPTION A - YouTube embed (recommended for large gameplay recordings)
         1. Upload your video to YouTube (can be unlisted)
         2. Get the video ID from the URL: youtube.com/watch?v=VIDEO_ID_HERE
         3. Replace VIDEO_ID_HERE below with your actual ID
@@ -61,7 +61,7 @@
       -->
 
       <!--
-        OPTION B — Local video file in your repo
+        OPTION B - Local video file in your repo
         1. Put your video in an "images" folder: images/dark-bros-gameplay.mp4
         2. Keep the file under ~50MB for GitHub (GitHub hard-limits at 100MB)
         3. For bigger files, use YouTube (Option A above) instead
@@ -100,10 +100,10 @@
         3. Replace the placeholder below with this:
 
         <div class="screenshot-grid">
-          <img src="images/dark-bros-1.jpg" alt="Dark Bros — gameplay screenshot" />
-          <img src="images/dark-bros-2.jpg" alt="Dark Bros — map overview" />
-          <img src="images/dark-bros-3.jpg" alt="Dark Bros — character select" />
-          <img src="images/dark-bros-4.jpg" alt="Dark Bros — lobby screen" />
+          <img src="images/dark-bros-1.jpg" alt="Dark Bros - gameplay screenshot" />
+          <img src="images/dark-bros-2.jpg" alt="Dark Bros - map overview" />
+          <img src="images/dark-bros-3.jpg" alt="Dark Bros - character select" />
+          <img src="images/dark-bros-4.jpg" alt="Dark Bros - lobby screen" />
         </div>
 
         TIP: PNG is best for UI screenshots. JPEG (quality ~85) is fine
@@ -112,12 +112,12 @@
 
       <!-- DELETE THIS once you add real screenshots above -->
       <div class="screenshot-grid">
-          <img src="dbScreenshots/1.png" alt="Dark Bros — Aerial shot from replay mode" />
-          <img src="dbScreenshots/2.png" alt="Dark Bros — Lobby join menu" />
-          <img src="dbScreenshots/3.png" alt="Dark Bros — On ground combat shot from replay mode" />
-          <img src="dbScreenshots/4.png" alt="Dark Bros — Steam capusle art" />
-          <img src="dbScreenshots/5.png" alt="Dark Bros — In-game environment shot" />
-          <img src="dbScreenshots/6.png" alt="Dark Bros — In-game environment shot" />
+          <img src="dbScreenshots/1.png" alt="Dark Bros - Aerial shot from replay mode" />
+          <img src="dbScreenshots/2.png" alt="Dark Bros - Lobby join menu" />
+          <img src="dbScreenshots/3.png" alt="Dark Bros - On ground combat shot from replay mode" />
+          <img src="dbScreenshots/4.png" alt="Dark Bros - Steam capusle art" />
+          <img src="dbScreenshots/5.png" alt="Dark Bros - In-game environment shot" />
+          <img src="dbScreenshots/6.png" alt="Dark Bros - In-game environment shot" />
         </div>
 
     </section>
@@ -133,40 +133,40 @@
           Unity Netcode for GameObjects over Steam P2P via Facepunch Steamworks
         </div>
         <div class="feature-item">
-          <strong>GPU grass</strong>
-          GPU-instanced with compute shader frustum culling
-        </div>
-        <div class="feature-item">
-          <strong>Custom shaders</strong>
-          Volumetric atmosphere, world-space shadows, subsurface scattering
-        </div>
-        <div class="feature-item">
-          <strong>Proximity voice chat</strong>
-          Per-player volume control and mute functionality
-        </div>
-        <div class="feature-item">
-          <strong>Grappling Hook</strong>
-          Collides with terrain and other players, and syncs smoothly over the network
-        </div>
-        <div class="feature-item">
-          <strong>Lobby system</strong>
-          Hosting, joining, search filters, kick and ban
-        </div>
-        <div class="feature-item">
           <strong>Replay system</strong>
           Snapshot-based post-match playback of full match state
         </div>
         <div class="feature-item">
-          <strong>Animation System</strong>
-          Allows for faster iteration on animations, bypassing Unity's built in animation system
+          <strong>Attack System</strong>
+          Highly modular system, used for almost all player actions, abstracting away networking in many cases
         </div>
         <div class="feature-item">
           <strong>Save Data System</strong>
           Custom JSON-based saving system, to save and load any data.
         </div>
         <div class="feature-item">
-          <strong>Attack System</strong>
-          Highly modular system, used for almost all player actions, abstracting away networking in many cases
+          <strong>Lobby system</strong>
+          Hosting, joining, search filters, kick and ban
+        </div>
+        <div class="feature-item">
+          <strong>Grappling Hook</strong>
+          Collides with terrain and other players, and syncs smoothly over the network
+        </div>
+        <div class="feature-item">
+          <strong>Proximity voice chat</strong>
+          Per-player volume control and mute functionality
+        </div>
+        <div class="feature-item">
+          <strong>Animation System</strong>
+          Allows for faster iteration on animations, bypassing Unity's built in animation system
+        </div>
+        <div class="feature-item">
+          <strong>GPU grass</strong>
+          GPU-instanced with compute shader frustum culling
+        </div>
+        <div class="feature-item">
+          <strong>Custom shaders</strong>
+          Volumetric atmosphere, world-space shadows, subsurface scattering
         </div>
         <div class="feature-item">
           <strong>4 playable characters</strong>

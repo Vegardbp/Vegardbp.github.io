@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C25 Crane | Vegard Pettersen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <a class="back-link" href="index.html">← All projects</a>
+
+    <!-- ── Project Hero ───────────────────────────────── -->
+    <section class="project-hero">
+      <div class="project-hero-tags">
+        <span class="tag tag-grade">Bachelor Thesis</span>
+        <span class="tag tag-solo">group project (4)</span>
+        <span class="tag tag-solo">Client: Seaonics AS</span>
+      </div>
+      <h1><strong>C25 Crane</strong></h1>
+      <p class="project-stack-line">Raspberry Pi 5 · Pico 2 (C++/Arduino) · Python · Fusion 360 · Blender · KiCad</p>
+      <p class="project-summary">
+        A 1:25 scale, fully functional replica of Seaonics' C25 offshore crane, built as a portable demonstration
+        rig that plugs directly into Seaonics' real production control stack and HMI.
+        <br><br>
+        Bachelor thesis in Automation Engineering (NTNU), completed with a group of four for client Seaonics AS.
+        <br><br>
+        My primary contributions were the python-based interface between seaonics control system, and physical motor control nodes. 
+        As well as most of the 3D design of the crane, 3D printing, and cable routing.
+        <br><br>
+        The crane reproduces slew, luffing, telescope, and winch motion driven live from Seaonics' industrial
+        control system, translating real operator joystick input into scaled physical motion through a
+        deterministic, bare-metal motor control layer.
+      </p>
+    </section>
+
+    <!-- ── Main Video ─────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Demo</p>
+
+      <!-- PLACEHOLDER: swap in real demo video/gif of the crane in operation -->
+      <div class="video-embed">
+        <video id="craneVideo" autoplay muted loop playsinline>
+          <source src="Videos/c25-crane-demo.mov" type="video/mp4">
+        </video>
+      </div>
+
+    </section>
+
+    <!-- ── Features ───────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Features</p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <strong>4-axis motion</strong>
+          Independently driven slew, luffing, telescope, and winch axes, each on a dedicated stepper motor and gearbox
+        </div>
+        <div class="feature-item">
+          <strong>Live Seaonics integration</strong>
+          Runs against the real Seaonics production control stack and HMI over TCP/IP, not a simulated stand-in
+        </div>
+        <div class="feature-item">
+          <strong>Distributed real-time control</strong>
+          Raspberry Pi 5 master handles industrial comms and kinematics; four bare-metal Pico 2 edge nodes generate
+          deterministic microsecond STEP pulses
+        </div>
+        <div class="feature-item">
+          <strong>Custom motor driver PCBs</strong>
+          Two hand-designed PCBs hosting MP6500 stepper drivers, with shared ground plane and per-driver bulk decoupling
+        </div>
+        <div class="feature-item">
+          <strong>Industrial-style power distribution</strong>
+          Four isolated PSUs, separated MCB protection groups, fused DC branches, and star-topology PE grounding
+        </div>
+        <div class="feature-item">
+          <strong>Hardware auto-discovery</strong>
+          Custom UART handshake protocol that maps each Pico controller to its COM port automatically at boot
+        </div>
+        <div class="feature-item">
+          <strong>Relay-based e-stop</strong>
+          Hardware emergency stop and limit switches that preserve motor holding torque instead of just cutting power
+        </div>
+        <div class="feature-item">
+          <strong>Thermal-aware motor tuning</strong>
+          Driver current settings tuned against measured thermal imaging data to keep motors within safe operating limits
+        </div>
+        <div class="feature-item">
+          <strong>Joystick operator interface</strong>
+          Thrustmaster T.Flight Stick X mapped directly to crane axes through the Seaonics control system
+        </div>
+        <div class="feature-item">
+          <strong>Travel-ready cabinet</strong>
+          Fully self-contained control cabinet with HMI, joystick, and power system built for conference demos
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /container -->

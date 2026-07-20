@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GPU Genetic Algorithm — Vegard Pettersen</title>
+  <title>GPU Genetic Algorithm | Vegard Pettersen</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -23,9 +23,9 @@
       <p class="project-summary">
         GPU-accelerated genetic algorithm running on the compute shader pipeline.
         <br><br>
-        Solves the Rastrigin function across high-dimensional search spaces (500 dimensions with 10K individuals in 13 seconds on an RTX 3060).
+        Designed to be adaptable to any problem below 500 dimensions, tested with 3-dimensional PID controller tuning against specified desired responses, solving in a few milliseconds.
         <br><br>
-        Designed to be adaptable to any problem below 500 dimensions, tested with 3 dimensional PID-tuning with specified desired responses, solving in a few milliseconds.
+        Also solves the Rastrigin function across high-dimensional search spaces (500 dimensions with 10K individuals in 13 seconds on an RTX 3060), a standard benchmark for multi-modal optimisation.
       </p>
       <div class="project-links">
         <a class="btn btn-solid" href="https://github.com/Vegardbp/PartB-GeneticAlgorithm" target="_blank">Source code and report on GitHub</a>
@@ -37,7 +37,7 @@
       <p class="section-label">Demonstration Video</p>
 
       <!--
-        YOUTUBE EMBED — replace VIDEO_ID_HERE with your YouTube video ID
+        YOUTUBE EMBED - replace VIDEO_ID_HERE with your YouTube video ID
         e.g. if your URL is youtube.com/watch?v=abc123  →  use  abc123
       -->
       <!--
@@ -63,16 +63,16 @@
       <p class="section-label">Details</p>
       <div class="features-grid">
         <div class="feature-item">
+          <strong>Adaptable design</strong>
+          Architecture is general enough to apply to other optimisation targets, such as PID tuning
+        </div>
+        <div class="feature-item">
           <strong>Compute shader acceleration</strong>
           Entire fitness evaluation and selection pipeline runs on GPU via HLSL compute shaders
         </div>
         <div class="feature-item">
           <strong>High-dimensional optimisation</strong>
-          Solves the Rastrigin function — a standard benchmark for high-dimensional, multi-modal problems
-        </div>
-        <div class="feature-item">
-          <strong>Adaptable design</strong>
-          Architecture is general enough to apply to other optimisation targets, such as PID tuning
+          Solves the Rastrigin function, a standard benchmark for high-dimensional, multi-modal problems
         </div>
         <div class="feature-item">
           <strong>Unity + HLSL</strong>
