@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nonlinear Fighter Jet Control | Vegard Pettersen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <a class="back-link" href="index.html">← All projects</a>
+
+    <!-- ── Project Hero ───────────────────────────────── -->
+    <section class="project-hero">
+      <div class="project-hero-tags">
+        <span class="tag tag-solo">solo project</span>
+      </div>
+      <h1><strong>Nonlinear Fighter Jet Control</strong></h1>
+      <p class="project-stack-line">Python · NumPy · Nonlinear State-Space Modeling · Jacobian Linearization · PID Control · Unity (visualization)</p>
+      <p class="project-summary">
+        A nonlinear state-space model of a fly-by-wire fighter jet, deliberately unstable like a real modern
+        fighter, flown through takeoff, level flight, a Pugachev's Cobra, and an uncontrolled tumble, all
+        under cascaded PID control.
+        <br><br>
+        Coursework project for Dynamic Systems, done solo.
+        <br><br>
+        Full writeup with the derivations, linearization, and controllability/observability testing is in the
+        <a href="dynamic-systems-report.pdf" target="_blank">report (PDF)</a>.
+      </p>
+    </section>
+
+    <!-- ── Main Video ─────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Demo</p>
+
+      <!-- PLACEHOLDER: swap in the Unity flight-sim visualization video -->
+      <div class="video-embed">
+        <video id="jetVideo" autoplay muted loop playsinline>
+          <source src="Videos/jetfighter-cobra-demo.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </section>
+
+    <!-- ── How it works ──────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">How it works</p>
+      <img src="Images/jetfighter-control-loop.png" alt="Block diagram of the full MIMO fighter jet control loop, showing cascaded PID controllers for altitude, speed, yaw, pitch, and roll feeding into the nonlinear plant" style="width:100%; border-radius:8px;" />
+      <p class="project-summary" style="margin-top:1rem;">
+        The aircraft is an 8-state nonlinear system (altitude, speed, yaw, pitch, roll, and their rates),
+        with pitch given negative damping so it diverges on its own without control input, the same
+        relaxed-stability approach real fighters use for maneuverability. Yaw, pitch, roll and speed each get
+        their own PID loop, and altitude drives the pitch setpoint from an outer loop.
+      </p>
+    </section>
+
+    <!-- ── Results ────────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Results</p>
+
+      <img src="Images/jetfighter-cobra-final.png" alt="Final simulation plot of the full mission profile: takeoff, cruise, Pugachev's Cobra maneuver between 500-600 seconds, and uncontrolled fall after regulators are disabled at 800 seconds" style="width:100%; border-radius:8px;" />
+      <p class="project-summary" style="margin-top:1rem; margin-bottom:2rem;">
+        Full mission profile: takeoff and climb to 1000m, cruise, a Pugachev's Cobra between 500-600s, then
+        regulators off at 800s to fall out of the sky. This was the test the whole model was built to survive.
+      </p>
+
+      <img src="Images/jetfighter-uncontrolled-tumble.png" alt="Simulation plot showing the fighter jet taking off, cruising, then tumbling out of control in yaw and pitch once regulators are disabled at 400 seconds" style="width:100%; border-radius:8px;" />
+      <p class="project-summary" style="margin-top:1rem;">
+        With regulators off, pitch runs away first since that's the unstable axis, yaw follows once the tail
+        stops pointing into the airflow, and the aircraft tumbles under its own angular momentum.
+      </p>
+    </section>
+
+  </div><!-- /container -->
