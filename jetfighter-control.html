@@ -47,7 +47,7 @@
     <!-- ── How it works ──────────────────────────────── -->
     <section class="media-section">
       <p class="section-label">How it works</p>
-      <img src="Images/jetfighter-control-loop.png" alt="Block diagram of the full MIMO fighter jet control loop, showing cascaded PID controllers for altitude, speed, yaw, pitch, and roll feeding into the nonlinear plant" style="width:100%; border-radius:8px;" />
+      <img src="images/jetfighter-control-loop.png" alt="Block diagram of the full MIMO fighter jet control loop, showing cascaded PID controllers for altitude, speed, yaw, pitch, and roll feeding into the nonlinear plant" style="width:100%; border-radius:8px;" />
       <p class="project-summary" style="margin-top:1rem;">
         The aircraft is an 8-state nonlinear system (altitude, speed, yaw, pitch, roll, and their rates),
         with pitch given negative damping so it diverges on its own without control input, the same
@@ -60,13 +60,13 @@
     <section class="media-section">
       <p class="section-label">Results</p>
 
-      <img src="Images/jetfighter-cobra-final.png" alt="Final simulation plot of the full mission profile: takeoff, cruise, Pugachev's Cobra maneuver between 500-600 seconds, and uncontrolled fall after regulators are disabled at 800 seconds" style="width:100%; border-radius:8px;" />
+      <img src="images/jetfighter-cobra-final.png" alt="Final simulation plot of the full mission profile: takeoff, cruise, Pugachev's Cobra maneuver between 500-600 seconds, and uncontrolled fall after regulators are disabled at 800 seconds" style="width:100%; border-radius:8px;" />
       <p class="project-summary" style="margin-top:1rem; margin-bottom:2rem;">
         Full mission profile: takeoff and climb to 1000m, cruise, a Pugachev's Cobra between 500-600s, then
         regulators off at 800s to fall out of the sky. This was the test the whole model was built to survive.
       </p>
 
-      <img src="Images/jetfighter-uncontrolled-tumble.png" alt="Simulation plot showing the fighter jet taking off, cruising, then tumbling out of control in yaw and pitch once regulators are disabled at 400 seconds" style="width:100%; border-radius:8px;" />
+      <img src="images/jetfighter-uncontrolled-tumble.png" alt="Simulation plot showing the fighter jet taking off, cruising, then tumbling out of control in yaw and pitch once regulators are disabled at 400 seconds" style="width:100%; border-radius:8px;" />
       <p class="project-summary" style="margin-top:1rem;">
         With regulators off, pitch runs away first since that's the unstable axis, yaw follows once the tail
         stops pointing into the airflow, and the aircraft tumbles under its own angular momentum.
