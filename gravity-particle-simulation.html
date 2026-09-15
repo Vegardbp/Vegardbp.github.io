@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPU Particle Simulation | Vegard Pettersen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+```
+<a class="back-link" href="index.html">← All projects</a>
+
+<section class="project-hero">
+  <div class="project-hero-tags">
+    <span class="tag tag-solo">Personal project</span>
+    <span class="tag tag-solo">GPU compute</span>
+    <span class="tag tag-solo">WebGPU</span>
+  </div>
+  <h1><strong>GPU Particle Simulation</strong></h1>
+  <p class="project-stack-line">TypeScript · React · Babylon.js · WebGPU · WGSL</p>
+  <p class="project-summary">
+    A real-time N-body particle simulation running entirely on the GPU using WebGPU compute shaders.
+    <br><br>
+    Each particle calculates its gravitational interaction with every other particle in parallel, with particle positions and velocities kept in GPU storage buffers throughout the simulation.
+    <br><br>
+    The simulation includes interactive controls for gravity strength, particle count, starting velocity, and starting radius. The rendering is also performed on the GPU using a storage texture and custom WGSL shaders.
+  </p>
+</section>
+
+
+<section class="media-section">
+  <p class="section-label">Interactive real-time simulation</p>
+
+  <div class="simulation-embed">
+    <iframe
+      src="/particleSimulation/"
+      title="GPU Particle Simulation"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+
+<!-- ── Features ───────────────────────────────────── -->
+<section class="media-section">
+  <p class="section-label">Details</p>
+  <div class="features-grid">
+    <div class="feature-item">
+      <strong>GPU N-body simulation</strong>
+      Every particle calculates the gravitational force from every other particle using a compute shader, giving the simulation an O(n²) computational workload
+    </div>
+    <div class="feature-item">
+      <strong>Compute shaders</strong>
+      Simulation logic is written in WGSL and executed through WebGPU compute shaders, with 256 GPU threads processed per workgroup
+    </div>
+    <div class="feature-item">
+      <strong>GPU particle storage</strong>
+      Particle positions and velocities are stored in GPU storage buffers and updated directly by the compute shader, avoiding CPU readback every frame
+    </div>
+    <div class="feature-item">
+      <strong>Custom rendering</strong>
+      Particles are rendered directly into a GPU storage texture using a Gaussian falloff, then displayed through a post-process pass
+    </div>
+    <div class="feature-item">
+      <strong>Interactive simulation</strong>
+      Gravity strength, particle count, starting velocity, and starting radius can all be changed through the interface and applied to a new simulation
+    </div>
+    <div class="feature-item">
+      <strong>Performance testing</strong>
+      The simulation includes a live FPS counter and supports up to 32,768 particles, making the computational cost of the N-body approach directly observable
+    </div>
+  </div>
+</section>
+
+  </div><!-- /container -->
+
+</body>
+</html>
