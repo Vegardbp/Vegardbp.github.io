@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLC Train Visualization | Vegard Pettersen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <a class="back-link" href="index.html">← All projects</a>
+
+    <section class="project-hero">
+      <div class="project-hero-tags">
+        <span class="tag tag-solo">Group project</span>
+        <span class="tag tag-solo">Primary developer: Unity + PLC communication</span>
+        <span class="tag tag-solo">NTNU · AIS2104 Industrielle styresystemer, 2025</span>
+      </div>
+
+      <h1><strong>PLC Train Visualization</strong></h1>
+
+      <p class="project-stack-line">Unity · C# · Modbus TCP · CODESYS · Blender</p>
+
+      <p class="project-summary">
+        3D visualization for an automated model railway, connected directly to a PLC over Modbus TCP.
+        <br><br>
+        I was primarily responsible for the Unity simulation, the communication between Unity and the PLC,
+        and integrating the controls from the visualization into the PLC program.
+        <br><br>
+        The visualization receives the current and next sensor position for each train, interpolates the
+        train movement between them, and allows the operator to select a train and send it to a chosen station.
+      </p>
+
+      <div class="project-links">
+        <a class="btn btn-solid" href="ais2104-togbane.pdf" target="_blank">
+          Project report (PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Demo Video ─────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Demonstration Video</p>
+
+      <!--
+        Replace the source below with the recording of the Unity visualization.
+      -->
+      <div class="video-embed">
+        <video autoplay muted loop playsinline>
+          <source src="Videos/PLCTogbane.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <!-- ── Features ───────────────────────────────────── -->
+    <section class="media-section">
+      <p class="section-label">Details</p>
+
+      <div class="features-grid">
+
+        <div class="feature-item">
+          <strong>Modbus TCP communication</strong>
+          Unity receives train position data from the PLC and sends target positions back for manual control
+        </div>
+
+        <div class="feature-item">
+          <strong>Sensor-based interpolation</strong>
+          The PLC sends the previous and expected next sensor, while Unity interpolates the train's position between them
+        </div>
+
+        <div class="feature-item">
+          <strong>Interactive train control</strong>
+          The user can select a train and choose a target station directly in the 3D visualization
+        </div>
+
+        <div class="feature-item">
+          <strong>PLC integration</strong>
+          Unity commands are fed into the same manual-control logic used by the PLC program
+        </div>
+
+        <div class="feature-item">
+          <strong>3D environment</strong>
+          Railway, terrain and other assets were built for the visualization, with the track based on the physical model
+        </div>
+
+        <div class="feature-item">
+          <strong>Performance fallback</strong>
+          Manual GPU instancing is used for the grass, with a Simple Visuals mode that disables expensive scenery
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /container -->
+
+</body>
+</html>
